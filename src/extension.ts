@@ -46,7 +46,7 @@ class ProblemCounter {
     if (doc.languageId === "yaml") {
       this._getProblemCount(doc).then(problemCount => {
         this._statusBarItem.text =
-          problemCount !== 1 ? `${problemCount} Problems` : "1 Problem";
+          problemCount !== 1 ? `$(alert) ${problemCount} Problems` : "$(alert) 1 Problem";
         
         
         if (problemCount > 0) {
