@@ -1,0 +1,34 @@
+{
+  "name": "magnolia-cms",
+  "displayName": "magnolia-cms",
+  "description": "Intelligent linting for Magnolia CMS",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:yaml"
+  ],
+  "main": "./out/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.1.4",
+    "vscode": "^1.1.21",
+    "tslint": "^5.8.0",
+    "@types/node": "^8.10.25",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "@types/request": "^2.48.1",
+    "request": "^2.88.0"
+  }
+}
